@@ -29,8 +29,8 @@ they both are completely different
 */ 
 #include <iostream>
 
-void increment(int& value)
-{
+void increment(int& value)//& tells you that don't make a new box(new memory space),just make "value" a nickname for what gets passed into
+{                         //while log(int a) stated that make a brand new int, copy the value into it, call it "a".
     value++;
 }
 
@@ -47,5 +47,5 @@ int main()
 /*
 so....nickname is a reference given to someone..like if I'm calling my friend bhai
 I am refering to a boy named ayush whom I saay bhai
-and when call parameter through
+
 */
