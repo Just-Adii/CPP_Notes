@@ -9,7 +9,7 @@ int main()
     std::cin.get();
     return 0;
 }
-/*
+/*Header file - File which contains all the declarations of the definations in library
 
 Why in some header files we use <> but in some we use " "?
 
