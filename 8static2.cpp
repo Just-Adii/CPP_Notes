@@ -3,24 +3,25 @@
 struct Entity
 {
   static int x,y;
-void Print()
+static void Print()
 {
     std::cout<<x<<" "<<y<<"\n";
 }
 };
-int Entity::x;
-int Entity::y;
+int Entity::x;// :: - Scope Resolution Operator - it tells the compiler exactly where 
+int Entity::y;//(in what scope) to look for a variable, function, class, or struct.
+
 
 int main()
 {
-    Entity e;
-    e.x=2;
-    e.y=3;
+    
+    Entity::x=2;
+    Entity::y=3;
 
    // Entity e2;
     //e2.x=5;
     //e2.y=30;
-    e.Print();
+    Entity::Print();
     //e2.Print();
     std::cin.get();
     return 0;
