@@ -14,10 +14,12 @@ int Entity::y;//(in what scope) to look for a variable, function, class, or stru
 
 int main()
 {
-    
+    //Entity e;
+    //e.x=2; e.y=2; -- they are similar to pass by reference
+    //e is an instance but it's this time like nickname to variable x and y not 
     Entity::x=2;
     Entity::y=3;
-
+    
    // Entity e2;
     //e2.x=5;
     //e2.y=30;

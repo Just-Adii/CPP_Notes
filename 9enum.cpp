@@ -15,3 +15,4 @@ int main()
     }
     return 0;
 }
+//enum basically groups data
