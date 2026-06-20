@@ -47,4 +47,33 @@ int main()
     std::cin.get();
     return 0;
 }
+/*
+-------------------------------------------------VVI FOR POINTERS--------------------------------------------------------------
 
+Let's take an example - 
+
+const char* name = "Cherno"
+
+When we wrote this it means a variable there's a memory allocated named "name" and it stores the address which is holding the data passed to
+the memory which is "Cherno"...pointer takes 4 bytes of memory in a 32 bit system and 8 byte in 64 bits
+
+Now when we go to memory and search name it won't show the Chrno stored in hex or decimal across 8 bits(char is 1 byte ie 8 bits)
+it will show an address let's say "0x004A2F10" this is a standard address occupying 32 bits
+
+how do I know - reason 
+1. "0x" symbol denotes whatever is after me is hexadecimal(base 16)
+2.hexadecial basically is 16 so it goes from 1-9 and A-F total 16 unique symbols so seeing an F we can guess though still better to guess from 0x
+now 1 hexadecimal value occupy 4 bits and in the address
+004A2F10 we have 8 characters ie total 8*4 = 32 bits of memory
+
+So a pointer generally takes 4 bytes (32 bits space) (2^32 addresses can be stored in a pointer ewhich is around 4 billion)
+
+and the address stored in pointer when we search that in memory then we reach the address where the actual data is stored in ascii character
+to know it better go to my Arm_x86 file it covers this same topic more inclined with memory
+
+---know this for now-----
+
+const char* name ="data"; - name is a pointer taking 4 bytes of data in a memory and using it to store address and that addrress when searched in 
+memory is the actual location of the data stored in the memory.
+--------------------------------------------------------------------------------------------------------------------------------
+*/
