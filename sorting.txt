@@ -1,0 +1,128 @@
+# DSA Sorting Algorithms — Quick Notes
+
+Yes, all of these are important! They're the foundation of DSA. Here's each one explained simply:
+
+---
+
+## 🔵 SORTING - I (Easy)
+
+-------------------------------------------------------1. Selection Sort-------------------------------------------------------------------------
+IDEA: Find the smallest element and put it in its correct position, repeat.
+
+ HOW IT WORKS:
+- Scan the whole array → find minimum → swap it to the front
+- Then scan from index 1 → find next minimum → swap, and so on
+
+ EXAMPLE:
+```
+[5, 3, 1, 4, 2]
+→ find min(1), swap with index 0 → [1, 3, 5, 4, 2]
+→ find min(2), swap with index 1 → [1, 2, 5, 4, 3]
+→ and so on...
+```
+ TIME: O(n²) | SPACE:O(1)
+
+---
+
+-------------------------------------------------------2. Bubble Sort-------------------------------------------------------
+IDEA: Repeatedly swap adjacent elements if they're in the wrong order. Largest "bubbles up" to end.
+
+HOW IT WORKS:
+- Compare arr[0] & arr[1] → swap if needed
+- Compare arr[1] & arr[2] → swap if needed
+- After each pass, the largest element settles at the end
+
+EXAMPLE:
+```
+[5, 3, 1, 4]
+Pass 1: [3,5,1,4] → [3,1,5,4] → [3,1,4,5]  ← 5 settled
+Pass 2: [1,3,4,5]  ← done
+```
+TIME: O(n²) | SPACE:O(1)
+
+---
+
+-------------------------------------------------------3. Insertion Sort-------------------------------------------------------
+IDEA: Like sorting playing cards in hand — pick one element and insert it in its correct position among already-sorted elements.
+
+HOW IT WORKS:
+- Start from index 1
+- Compare with elements before it → shift them right → insert in correct spot
+
+EXAMPLE:
+```
+[4, 3, 2, 1]
+i=1: [3, 4, 2, 1]
+i=2: [2, 3, 4, 1]
+i=3: [1, 2, 3, 4]
+```
+TIME: O(n²) worst, **O(n) best (already sorted)** | SPACEO(1)
+
+----------------------------------------------------------
+
+🟡 SORTING - II (Medium/Easy)
+
+-------------------------------------------------------4. Merge Sort-------------------------------------------------------
+IDEA: Divide array into two halves → sort each half → merge them back. Uses **Divide & Conquer**.
+
+HOW IT WORKS:
+```
+[3, 1, 4, 2]
+  ↙        ↘
+[3,1]      [4,2]
+↙   ↘      ↙   ↘
+[3] [1]   [4]  [2]
+  ↘ ↙       ↘ ↙
+ [1,3]      [2,4]
+      ↘    ↙
+    [1,2,3,4]
+```
+TIME: O(n log n) | SPACE:O(n) ← uses extra array
+
+---
+
+-------------------------------------------------------5. Recursive Bubble Sort-------------------------------------------------------
+Same as Bubble Sort but written **recursively** instead of loops.
+- Each call does one pass → bubbles max to end → calls itself for n-1 elements
+- Concept is identical, just recursive implementation practice
+
+---
+
+### 6. Recursive Insertion Sort
+Same as Insertion Sort but **recursively**.
+- Sort first n-1 elements recursively → insert nth element in right place
+- Again, concept same — just recursive practice
+
+---
+
+-------------------------------------------------------7. Quick Sort-------------------------------------------------------
+IDEA: Pick a **pivot** → put all smaller elements left of it, larger right → repeat for both sides.
+
+HOW IT WORKS:
+```
+[3, 6, 8, 10, 1, 2, 1]  pivot = 3
+→ [1, 2, 1,  3,  6, 8, 10]
+         ↙ pivot settled ↘
+    [1,2,1]          [6,8,10]
+   (sort these)    (sort these)
+```
+TIME: O(n log n) avg, O(n²) worst | SPACE:O(log n)
+
+---
+
+-------------------------------------------------------📌 Quick Comparison Table-------------------------------------------------------
+
+| Sort       | Time (Avg)  | Space    | Stable? | Key Idea |
+|------      |-----------  |-------   |---------|----------|
+| Selection  | O(n²)       | O(1)     | No      | Find min, place it |
+| Bubble     | O(n²)       | O(1)     | Yes     | Swap adjacent |
+| Insertion  | O(n²)       | O(1)     | Yes     | Insert in right place |
+| Merge      | O(n log n)  | O(n)     | Yes     | Divide & merge |
+| Quick      | O(n log n)  | O(log n) | No      | Pivot partition |
+
+---
+
+---------------------------------------------------🎯 Which ones actually matter in interviews?-------------------------------
+- **Must know deeply:** Merge Sort, Quick Sort
+- **Conceptual understanding:** Bubble, Insertion, Selection
+- **Recursive versions:** Just to practice recursion thinking
