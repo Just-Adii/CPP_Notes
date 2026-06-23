@@ -1,3 +1,18 @@
+
+/*
+---
+ANYTHING EXTERNAL TO A PROGRAM NEEDS A POINTER TO BE ACCESSED,BE IT HEAP OR FILE OR HARDWARE LIKE KEYBOARD,MONITER,INTERNET/NETWORK CONNECTION
+ALL THESE NEEDS POINTER(Only difference b/w accessing memory through a pointer and hardware is the pointer type...memory access require 
+memory pointer while the hardware requires opaque pointer)
+
+In short - PARAMETER CAN USED TO ACCESS
+- MEMORY
+- RESOURCES
+- can also be used to pass PARAMETERS
+---
+*/
+
+
 /*
 Pointer is a variable which holds an address...an integer
 
