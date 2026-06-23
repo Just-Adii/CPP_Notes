@@ -224,4 +224,13 @@ Stack keeps growing down:
 - CPU reads instructions from here to execute your program
 - Every function you write (`main`, etc.) lives here as opcodes
 
+>NOTE :
+If it is an action, condition, or instruction (like if, else, while, for, +, -), it compiles directly into machine code and lives in the Code Section. If it is data or a variable, it lives in the Stack, Heap, BSS, or Data segments.
 
+*std::cout (A Hybrid Code + Heap/Stack)*
+
+cout isn't just an instruction; it is a massive object defined by the C++ Standard Library to handle printing to your screen.
+
+    The Code Part: The instructions for how cout formatting works (how it converts an integer to text, how it interacts with the OS terminal) live in the Code Section.
+
+    The Memory Part: Because cout maintains internal buffers (temporary storage blocks to hold text before dumping it onto your screen), it uses a tiny bit of global/heap memory behind the scenes to manage that data.

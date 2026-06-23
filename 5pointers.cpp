@@ -77,3 +77,16 @@ const char* name ="data"; - name is a pointer taking 4 bytes of data in a memory
 memory is the actual location of the data stored in the memory.
 --------------------------------------------------------------------------------------------------------------------------------
 */
+/*
+ If you're confused in asterisk part read this
+
+int a = 10;
+int *p;
+p=&a;
+cout<<p;//will just print address stored in pointer
+cout<<*p;//(dereferencing)
+
+DEREFERENCING - Takes the value/data stored inside the address pointer is pointing to
+
+Thus - (*) aesterisk is used only when declaring and dereferencing the pointer,none other time
+*/

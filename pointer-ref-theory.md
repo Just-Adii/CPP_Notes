@@ -100,21 +100,21 @@ void log(int& a) { }
 
 ## Memory Comparison Table
 
-| | Extra Memory | Modifies Original | Can be Null | Syntax |
-|---|---|---|---|---|
-| Value | Full copy size | ❌ | ❌ | Clean |
-| Pointer | Fixed 4/8 bytes | ✅ | ✅ | Messy |
-| Reference | 0 bytes | ✅ | ❌ | Clean |
+|          | Extra Memory      | Modifies Original | Can be Null | Syntax |
+|          |---                |---                |---          |---     |
+| Value    | Full copy size    | ❌                | ❌         |  Clean |
+| Pointer  | Fixed 4/8 bytes   | ✅                | ✅         |  Messy |
+| Reference| 0 bytes           | ✅                | ❌         |  Clean |
 
 ---
 
 ## Runtime Efficiency
 
-| | Speed | Reason |
-|---|---|---|
-| Value | Slowest | Allocate + copy + destroy |
-| Pointer | Fast | Just stores one address |
-| Reference | Fastest | No new variable at all |
+|           | Speed    | Reason                    |
+|---        |---       |---                        |
+| Value     | Slowest  | Allocate + copy + destroy |
+| Pointer   | Fast     | Just stores one address   |
+| Reference | Fastest  | No new variable at all    |
 
 ---
 

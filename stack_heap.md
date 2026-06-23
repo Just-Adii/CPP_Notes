@@ -33,7 +33,7 @@ While **HEAP** is a low address memory ie it starts from somewhere let's say 000
 > It Stores : (Grows Upward towards Stack)
 - Dynamically Allocated Arrays (Eg. new int[10000];)
 - Objects created at runtime (eg. new Myclass();)
-- Larege object that exceeds stack's 1-8MB limit(eg. maloc(1000000))
+- Larege object that exceeds stack's ~1-8MB limit(eg. maloc(1000000))
 
 >MANAGED MANUALLY : 
 - Manually allocated and I'm responisble for freeing it.
@@ -45,7 +45,7 @@ Key rule: every new/malloc MUST have a delete/free
 
  > CASE TO KEEP IN MIND : <int* ptr = new int[50];> 
 
- *In above code ptr will be stored in heap containing the address of array int while int[50] will be stored in heap with all it's data*
+ *In above code ptr will be stored in stack containing the address of array int while int[50] will be stored in heap with all it's data*
 ### Visual Representation : 
 STACK (High Address)                     HEAP (Low Address)
 +-------------------+                    +-------------------------------------+
