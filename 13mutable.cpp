@@ -19,5 +19,8 @@ int main()
 {
     const Entity e;
     e.GetName();
+
+    //above was first and mostly used way of using mutable....2nd is using while using lambda
+    //it's quite complicated so I'll learn it while learning lambda and then update this part
     return 0;
 }

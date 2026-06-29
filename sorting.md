@@ -154,7 +154,7 @@ SPACE: O(log n) | STABLE? No
 
 ---
 
-------------------------------------------------------- 🎯 Interview Priority
+------------------------------------------------------- 🎯 Interview Priority-------------------------------------------------------
 - **Must implement from scratch:** Merge Sort, Quick Sort
 - **Must know optimizations:** Bubble (swapped flag), Quick (random pivot)
 - **Conceptual only:** Selection, Bubble, Insertion

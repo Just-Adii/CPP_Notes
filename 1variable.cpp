@@ -1,3 +1,8 @@
+/*
+nothing before a variable      - DATA VARIBLE(data stored in Stack)
+Asterisk Before a Variable     - ADDRESS VARIABLE(Data Stored in Stack and Heap)
+AMPERSAND(&) Before a Variable - REFERENCE VARIABLE(must be initialised at time of declaration)
+*/
 #include <iostream>
 
 int main()
